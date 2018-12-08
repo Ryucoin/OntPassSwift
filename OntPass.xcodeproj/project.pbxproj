@@ -21,6 +21,8 @@
 		4AD9D1C921BB746B00BBEC8E /* OntController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1C821BB746B00BBEC8E /* OntController.swift */; };
 		4AD9D1CB21BB765300BBEC8E /* EnterPrivateKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1CA21BB765300BBEC8E /* EnterPrivateKeyViewController.swift */; };
 		4AD9D1CD21BB778D00BBEC8E /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1CC21BB778D00BBEC8E /* TriangleView.swift */; };
+		4AD9D1D021BB7E9200BBEC8E /* PasswordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1CF21BB7E9200BBEC8E /* PasswordsViewController.swift */; };
+		4AD9D1D221BB7ED200BBEC8E /* PasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1D121BB7ED200BBEC8E /* PasswordTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		4AD9D1C821BB746B00BBEC8E /* OntController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OntController.swift; sourceTree = "<group>"; };
 		4AD9D1CA21BB765300BBEC8E /* EnterPrivateKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPrivateKeyViewController.swift; sourceTree = "<group>"; };
 		4AD9D1CC21BB778D00BBEC8E /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		4AD9D1CF21BB7E9200BBEC8E /* PasswordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsViewController.swift; sourceTree = "<group>"; };
+		4AD9D1D121BB7ED200BBEC8E /* PasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			children = (
 				4A3AEFB721BB6240006AD11F /* Fonts */,
 				4A3AEFC321BB715E006AD11F /* Scan QR Code */,
+				4AD9D1CE21BB7E7D00BBEC8E /* Passwords Page */,
 				4A3AEFC021BB661D006AD11F /* Sign In */,
 				4A3AEFB421BB5D4B006AD11F /* Landing Page */,
 				4A3AEFA221BB5CB8006AD11F /* AppDelegate.swift */,
@@ -121,6 +126,15 @@
 				4A3AEFC421BB7176006AD11F /* ScanQRViewController.swift */,
 			);
 			path = "Scan QR Code";
+			sourceTree = "<group>";
+		};
+		4AD9D1CE21BB7E7D00BBEC8E /* Passwords Page */ = {
+			isa = PBXGroup;
+			children = (
+				4AD9D1CF21BB7E9200BBEC8E /* PasswordsViewController.swift */,
+				4AD9D1D121BB7ED200BBEC8E /* PasswordTableViewCell.swift */,
+			);
+			path = "Passwords Page";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD9D1D221BB7ED200BBEC8E /* PasswordTableViewCell.swift in Sources */,
 				4A3AEFC221BB6642006AD11F /* SignInViewController.swift in Sources */,
 				4AD9D1C921BB746B00BBEC8E /* OntController.swift in Sources */,
 				4A3AEFB621BB5D5E006AD11F /* LandingViewController.swift in Sources */,
@@ -204,6 +219,7 @@
 				4AD9D1CB21BB765300BBEC8E /* EnterPrivateKeyViewController.swift in Sources */,
 				4A3AEFBF21BB636B006AD11F /* Constants.swift in Sources */,
 				4AD9D1CD21BB778D00BBEC8E /* TriangleView.swift in Sources */,
+				4AD9D1D021BB7E9200BBEC8E /* PasswordsViewController.swift in Sources */,
 				4A3AEFC521BB7176006AD11F /* ScanQRViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

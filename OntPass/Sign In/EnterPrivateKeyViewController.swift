@@ -92,7 +92,13 @@ class EnterPrivateKeyViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func loginTapped() {
-        showError(withMessage: "Private Key Incorrect")
+        let success = true
+        if success {
+            performSegue(withIdentifier: "logged in", sender: self)
+            
+        } else {
+            showError(withMessage: "Private Key Incorrect")
+        }
     }
     
     func textField(_ textField: UITextField,
