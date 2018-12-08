@@ -431,10 +431,91 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="itu-cl-uGQ"/>
+                    <connections>
+                        <segue destination="Vpw-yG-1bv" kind="show" identifier="wallet info" id="LH9-f9-ccd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3f-bC-vWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5714" y="813"/>
+        </scene>
+        <!--View Wallet View Controller-->
+        <scene sceneID="wju-nz-xSA">
+            <objects>
+                <viewController id="Vpw-yG-1bv" customClass="ViewWalletViewController" customModule="OntPass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iky-sx-0fG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AX-1U-QFb">
+                                <rect key="frame" x="37" y="93" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ont ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFA-PP-GUN">
+                                <rect key="frame" x="37" y="194.5" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOT-NR-MWr">
+                                <rect key="frame" x="37" y="296" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdli78438" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRh-yb-zcd">
+                                <rect key="frame" x="37" y="134" width="301" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdli78438" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIL-ux-7By">
+                                <rect key="frame" x="37" y="235.5" width="301" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdli78438" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csg-V2-Pcf">
+                                <rect key="frame" x="37" y="337" width="301" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VIL-ux-7By" firstAttribute="top" secondItem="cFA-PP-GUN" secondAttribute="bottom" constant="20" id="7HX-IB-Tbv"/>
+                            <constraint firstItem="cFA-PP-GUN" firstAttribute="top" secondItem="KRh-yb-zcd" secondAttribute="bottom" constant="40" id="Ckb-Gv-ZNZ"/>
+                            <constraint firstItem="cFA-PP-GUN" firstAttribute="leading" secondItem="KRh-yb-zcd" secondAttribute="leading" id="Q15-sk-A24"/>
+                            <constraint firstItem="Ung-8C-F48" firstAttribute="trailing" secondItem="VIL-ux-7By" secondAttribute="trailing" constant="37" id="RYh-NX-qNl"/>
+                            <constraint firstItem="csg-V2-Pcf" firstAttribute="leading" secondItem="yOT-NR-MWr" secondAttribute="leading" id="Sa9-53-Uqq"/>
+                            <constraint firstItem="9AX-1U-QFb" firstAttribute="leading" secondItem="Ung-8C-F48" secondAttribute="leading" constant="37" id="Spb-cO-BTb"/>
+                            <constraint firstItem="csg-V2-Pcf" firstAttribute="top" secondItem="yOT-NR-MWr" secondAttribute="bottom" constant="20" id="ZVF-LY-zqc"/>
+                            <constraint firstItem="yOT-NR-MWr" firstAttribute="top" secondItem="VIL-ux-7By" secondAttribute="bottom" constant="40" id="f1h-MX-aVL"/>
+                            <constraint firstItem="9AX-1U-QFb" firstAttribute="top" secondItem="iky-sx-0fG" secondAttribute="top" constant="93" id="gq5-MC-ZrB"/>
+                            <constraint firstItem="yOT-NR-MWr" firstAttribute="leading" secondItem="VIL-ux-7By" secondAttribute="leading" id="hyg-IU-Lzy"/>
+                            <constraint firstItem="VIL-ux-7By" firstAttribute="leading" secondItem="cFA-PP-GUN" secondAttribute="leading" id="olJ-xI-9i6"/>
+                            <constraint firstItem="Ung-8C-F48" firstAttribute="trailing" secondItem="csg-V2-Pcf" secondAttribute="trailing" constant="37" id="p6x-rg-s4K"/>
+                            <constraint firstItem="Ung-8C-F48" firstAttribute="trailing" secondItem="KRh-yb-zcd" secondAttribute="trailing" constant="37" id="rmC-Tv-vzk"/>
+                            <constraint firstItem="KRh-yb-zcd" firstAttribute="top" secondItem="9AX-1U-QFb" secondAttribute="bottom" constant="20" id="s2u-ka-4RR"/>
+                            <constraint firstItem="KRh-yb-zcd" firstAttribute="leading" secondItem="9AX-1U-QFb" secondAttribute="leading" id="x5A-YF-cu4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ung-8C-F48"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressStatic" destination="9AX-1U-QFb" id="BL5-Z5-xLi"/>
+                        <outlet property="adress" destination="KRh-yb-zcd" id="AdQ-VQ-IW8"/>
+                        <outlet property="ontID" destination="VIL-ux-7By" id="KDi-Ih-DmM"/>
+                        <outlet property="ontIDstatic" destination="cFA-PP-GUN" id="1Gq-pV-8fA"/>
+                        <outlet property="privateLabel" destination="csg-V2-Pcf" id="saa-oG-NG7"/>
+                        <outlet property="privateStatic" destination="yOT-NR-MWr" id="OYw-lZ-Pl1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mRg-Ag-3eV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6828" y="813"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A05-em-1Xd">

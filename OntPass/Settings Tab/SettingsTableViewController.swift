@@ -85,7 +85,9 @@ class SettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 && indexPath.row == 1 {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            performSegue(withIdentifier: "wallet info", sender: self)
+        } else if indexPath.section == 0 && indexPath.row == 1 {
             guard let url = URL(string: "http://ont.io") else { return }
             UIApplication.shared.open(url)
         }
