@@ -13,6 +13,13 @@ let regularFont = "SourceSansPro-Regular"
 let lightFont = "SourceSansPro-ExtraLight"
 let boldFont = "SourceSansPro-Semibold"
 
+let deviceIsiPhone5s = screenHeight < 569
+
+let screenWidth = UIScreen.main.bounds.width < UIScreen.main.bounds.height ?
+    UIScreen.main.bounds.width : UIScreen.main.bounds.height
+let screenHeight = UIScreen.main.bounds.width < UIScreen.main.bounds.height ?
+    UIScreen.main.bounds.height : UIScreen.main.bounds.width
+
 func hexStringToUIColor (hex: String) -> UIColor {
     var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
     

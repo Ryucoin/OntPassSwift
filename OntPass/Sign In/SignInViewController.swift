@@ -74,11 +74,12 @@ class SignInViewController: UIViewController {
         
     }
     
+    
     @objc func enterTapped() {
         print("enter Tapped")
     }
     @objc func scanTapped() {
-       print("scan Tapped")
+       performSegue(withIdentifier: "scan private", sender: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -91,6 +92,26 @@ class SignInViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var scanLeftConstraint: NSLayoutConstraint! {
+        didSet {
+            if deviceIsiPhone5s {
+                scanLeftConstraint.constant = screenWidth * 0.04
+            } else {
+                scanLeftConstraint.constant = screenWidth * 0.072
+            }
+
+        }
+    }
+    @IBOutlet weak var enterRightConstraint: NSLayoutConstraint! {
+        didSet {
+            if deviceIsiPhone5s {
+                enterRightConstraint.constant = screenWidth * 0.04
+            } else {
+                enterRightConstraint.constant = screenWidth * 0.072
+            }
+
+        }
+    }
     
     
 }

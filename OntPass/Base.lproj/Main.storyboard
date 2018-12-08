@@ -207,6 +207,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomFakePrivateKeyView" destination="oAb-Bp-ZtM" id="dKZ-Fl-ulA"/>
+                        <outlet property="enterRightConstraint" destination="SUU-FJ-66G" id="reg-jA-hS1"/>
                         <outlet property="enterTopLabel" destination="gvS-fz-p0N" id="rH3-Co-SnW"/>
                         <outlet property="enterView" destination="Kgs-eu-EJj" id="WLh-Lw-s2J"/>
                         <outlet property="enterbottomLabel" destination="ObI-ju-mbQ" id="bGd-hH-Uc8"/>
@@ -214,14 +215,31 @@
                         <outlet property="fakePrivateKeyLabel" destination="usP-VK-DUE" id="JYJ-NV-xKn"/>
                         <outlet property="scanBottomLabel" destination="ps1-33-uxh" id="xQ4-eb-Cxt"/>
                         <outlet property="scanImage" destination="C8k-Ut-rAR" id="GQk-2J-rV6"/>
+                        <outlet property="scanLeftConstraint" destination="oBH-eg-lgg" id="Toh-kb-pAx"/>
                         <outlet property="scanTopLabel" destination="4dd-Ic-vR9" id="Q6k-4r-JBy"/>
                         <outlet property="scanView" destination="eep-g8-rNs" id="7uB-jY-71G"/>
                         <outlet property="topLabel" destination="lFe-7V-h70" id="G8K-ND-fPW"/>
+                        <segue destination="5En-Rw-Cex" kind="show" identifier="scan private" id="2cW-fj-FKG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUA-fE-dSM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1932" y="385.45727136431788"/>
+        </scene>
+        <!--ScanQR View Controller-->
+        <scene sceneID="JMi-kA-AZc">
+            <objects>
+                <viewController id="5En-Rw-Cex" customClass="ScanQRViewController" customModule="OntPass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xc2-RU-Jlm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5sG-gz-EEt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yMm-7A-xkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2838" y="745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tmK-iU-UoJ">

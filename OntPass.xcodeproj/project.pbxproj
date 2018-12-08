@@ -17,6 +17,7 @@
 		4A3AEFBD21BB6292006AD11F /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4A3AEFBC21BB6292006AD11F /* SourceSansPro-Regular.otf */; };
 		4A3AEFBF21BB636B006AD11F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AEFBE21BB636B006AD11F /* Constants.swift */; };
 		4A3AEFC221BB6642006AD11F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AEFC121BB6642006AD11F /* SignInViewController.swift */; };
+		4A3AEFC521BB7176006AD11F /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AEFC421BB7176006AD11F /* ScanQRViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4A3AEFBC21BB6292006AD11F /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
 		4A3AEFBE21BB636B006AD11F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4A3AEFC121BB6642006AD11F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		4A3AEFC421BB7176006AD11F /* ScanQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				4A3AEFB721BB6240006AD11F /* Fonts */,
+				4A3AEFC321BB715E006AD11F /* Scan QR Code */,
 				4A3AEFC021BB661D006AD11F /* Sign In */,
 				4A3AEFB421BB5D4B006AD11F /* Landing Page */,
 				4A3AEFA221BB5CB8006AD11F /* AppDelegate.swift */,
@@ -101,6 +104,14 @@
 				4A3AEFC121BB6642006AD11F /* SignInViewController.swift */,
 			);
 			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		4A3AEFC321BB715E006AD11F /* Scan QR Code */ = {
+			isa = PBXGroup;
+			children = (
+				4A3AEFC421BB7176006AD11F /* ScanQRViewController.swift */,
+			);
+			path = "Scan QR Code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				4A3AEFB621BB5D5E006AD11F /* LandingViewController.swift in Sources */,
 				4A3AEFA321BB5CB8006AD11F /* AppDelegate.swift in Sources */,
 				4A3AEFBF21BB636B006AD11F /* Constants.swift in Sources */,
+				4A3AEFC521BB7176006AD11F /* ScanQRViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
