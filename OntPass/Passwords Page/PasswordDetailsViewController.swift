@@ -17,7 +17,16 @@ class PasswordDetailsViewController: UIViewController, UIViewControllerTransitio
     }()
     
     let menuView = UIView()
-    let menuHeight: CGFloat = 50 * 7
+    
+    var menuHeight: CGFloat {
+        var topSpace : CGFloat = 0
+        let height : CGFloat = 50 * 7
+        
+        if #available(iOS 11.0, *) {
+            topSpace = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
+        }
+        return height + topSpace
+    }
     var isPresenting = false
     
     init() {
@@ -188,7 +197,7 @@ class PasswordDetailsViewController: UIViewController, UIViewControllerTransitio
     @objc func deletePassword() {
         let alert = UIAlertController(title: "Are you sure you want to delete your password?", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Delete Password", style: .destructive, handler: { action in
-                print("Delete Password for url: \(passwordForDetail?.url)")
+            print("Delete Password for url: \(String(describing: passwordForDetail?.url))")
                 self.dismiss(animated: true, completion: nil)
             }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in

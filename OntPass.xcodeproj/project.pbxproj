@@ -28,7 +28,7 @@
 		4AD9D1D921BB97F700BBEC8E /* PasswordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1D821BB97F700BBEC8E /* PasswordDetailsViewController.swift */; };
 		4AD9D1DB21BB9EE000BBEC8E /* PasswordObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1DA21BB9EE000BBEC8E /* PasswordObject.swift */; };
 		4AD9D1DD21BBADA100BBEC8E /* ViewWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1DC21BBADA100BBEC8E /* ViewWalletViewController.swift */; };
-		4AD9D1DF21BBB0FF00BBEC8E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1DE21BBB0FF00BBEC8E /* EditViewController.swift */; };
+		4AD9D1E321BBB32900BBEC8E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1E221BBB32900BBEC8E /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +55,7 @@
 		4AD9D1D821BB97F700BBEC8E /* PasswordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailsViewController.swift; sourceTree = "<group>"; };
 		4AD9D1DA21BB9EE000BBEC8E /* PasswordObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordObject.swift; sourceTree = "<group>"; };
 		4AD9D1DC21BBADA100BBEC8E /* ViewWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWalletViewController.swift; sourceTree = "<group>"; };
-		4AD9D1DE21BBB0FF00BBEC8E /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		4AD9D1E221BBB32900BBEC8E /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +149,7 @@
 				4AD9D1D121BB7ED200BBEC8E /* PasswordTableViewCell.swift */,
 				4AD9D1D821BB97F700BBEC8E /* PasswordDetailsViewController.swift */,
 				4AD9D1DA21BB9EE000BBEC8E /* PasswordObject.swift */,
-				4AD9D1DE21BBB0FF00BBEC8E /* EditViewController.swift */,
+				4AD9D1E221BBB32900BBEC8E /* EditViewController.swift */,
 			);
 			path = "Passwords Page";
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 				4A3AEFB621BB5D5E006AD11F /* LandingViewController.swift in Sources */,
 				4A3AEFA321BB5CB8006AD11F /* AppDelegate.swift in Sources */,
 				4AD9D1D921BB97F700BBEC8E /* PasswordDetailsViewController.swift in Sources */,
-				4AD9D1DF21BBB0FF00BBEC8E /* EditViewController.swift in Sources */,
+				4AD9D1E321BBB32900BBEC8E /* EditViewController.swift in Sources */,
 				4AD9D1CB21BB765300BBEC8E /* EnterPrivateKeyViewController.swift in Sources */,
 				4A3AEFBF21BB636B006AD11F /* Constants.swift in Sources */,
 				4AD9D1CD21BB778D00BBEC8E /* TriangleView.swift in Sources */,
