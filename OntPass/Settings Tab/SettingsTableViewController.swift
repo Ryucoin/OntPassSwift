@@ -64,13 +64,14 @@ class SettingsTableViewController: UITableViewController {
         
         cell.textLabel?.textColor = .white
         
+        cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+        
         if indexPath.section == 0 && indexPath.row == 0 {
             cell.textLabel?.text = "View your wallet information"
         } else if indexPath.section == 0 && indexPath.row == 1 {
             cell.textLabel?.text = "Learn more about Ontology"
         } else if indexPath.section == 1 && indexPath.row == 0 {
             cell.textLabel?.text = "Log out"
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
             cell.textLabel?.textColor = errorRedColor
         }
         

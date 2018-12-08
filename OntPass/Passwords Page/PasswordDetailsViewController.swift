@@ -185,7 +185,15 @@ class PasswordDetailsViewController: UIViewController, UIViewControllerTransitio
         
     }
     @objc func deletePassword() {
-        print("deletePassword")
+        let alert = UIAlertController(title: "Are you sure you want to delete your password?", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Delete Password", style: .destructive, handler: { action in
+                print("Delete Password for url: \(passwordForDetail?.url)")
+                self.dismiss(animated: true, completion: nil)
+            }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+            print("Cancel")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     
