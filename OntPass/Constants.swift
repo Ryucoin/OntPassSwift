@@ -15,6 +15,10 @@ let boldFont = "SourceSansPro-Semibold"
 
 let deviceIsiPhone5s = screenHeight < 569
 
+let errorRedColor = hexStringToUIColor(hex: "FE3824")
+
+let ontColor = hexStringToUIColor(hex: "2fa1bc")
+
 let screenWidth = UIScreen.main.bounds.width < UIScreen.main.bounds.height ?
     UIScreen.main.bounds.width : UIScreen.main.bounds.height
 let screenHeight = UIScreen.main.bounds.width < UIScreen.main.bounds.height ?

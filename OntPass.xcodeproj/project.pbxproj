@@ -18,6 +18,9 @@
 		4A3AEFBF21BB636B006AD11F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AEFBE21BB636B006AD11F /* Constants.swift */; };
 		4A3AEFC221BB6642006AD11F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AEFC121BB6642006AD11F /* SignInViewController.swift */; };
 		4A3AEFC521BB7176006AD11F /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3AEFC421BB7176006AD11F /* ScanQRViewController.swift */; };
+		4AD9D1C921BB746B00BBEC8E /* OntController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1C821BB746B00BBEC8E /* OntController.swift */; };
+		4AD9D1CB21BB765300BBEC8E /* EnterPrivateKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1CA21BB765300BBEC8E /* EnterPrivateKeyViewController.swift */; };
+		4AD9D1CD21BB778D00BBEC8E /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1CC21BB778D00BBEC8E /* TriangleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		4A3AEFBE21BB636B006AD11F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4A3AEFC121BB6642006AD11F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4A3AEFC421BB7176006AD11F /* ScanQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRViewController.swift; sourceTree = "<group>"; };
+		4AD9D1C821BB746B00BBEC8E /* OntController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OntController.swift; sourceTree = "<group>"; };
+		4AD9D1CA21BB765300BBEC8E /* EnterPrivateKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPrivateKeyViewController.swift; sourceTree = "<group>"; };
+		4AD9D1CC21BB778D00BBEC8E /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +79,11 @@
 				4A3AEFA221BB5CB8006AD11F /* AppDelegate.swift */,
 				4A3AEFBE21BB636B006AD11F /* Constants.swift */,
 				4A3AEFA621BB5CB8006AD11F /* Main.storyboard */,
+				4AD9D1CC21BB778D00BBEC8E /* TriangleView.swift */,
 				4A3AEFA921BB5CB9006AD11F /* Assets.xcassets */,
 				4A3AEFAB21BB5CB9006AD11F /* LaunchScreen.storyboard */,
 				4A3AEFAE21BB5CB9006AD11F /* Info.plist */,
+				4AD9D1C821BB746B00BBEC8E /* OntController.swift */,
 			);
 			path = OntPass;
 			sourceTree = "<group>";
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				4A3AEFC121BB6642006AD11F /* SignInViewController.swift */,
+				4AD9D1CA21BB765300BBEC8E /* EnterPrivateKeyViewController.swift */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -189,9 +198,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A3AEFC221BB6642006AD11F /* SignInViewController.swift in Sources */,
+				4AD9D1C921BB746B00BBEC8E /* OntController.swift in Sources */,
 				4A3AEFB621BB5D5E006AD11F /* LandingViewController.swift in Sources */,
 				4A3AEFA321BB5CB8006AD11F /* AppDelegate.swift in Sources */,
+				4AD9D1CB21BB765300BBEC8E /* EnterPrivateKeyViewController.swift in Sources */,
 				4A3AEFBF21BB636B006AD11F /* Constants.swift in Sources */,
+				4AD9D1CD21BB778D00BBEC8E /* TriangleView.swift in Sources */,
 				4A3AEFC521BB7176006AD11F /* ScanQRViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

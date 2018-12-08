@@ -76,7 +76,7 @@ class SignInViewController: UIViewController {
     
     
     @objc func enterTapped() {
-        print("enter Tapped")
+        performSegue(withIdentifier: "enter private key", sender: self)
     }
     @objc func scanTapped() {
        performSegue(withIdentifier: "scan private", sender: self)

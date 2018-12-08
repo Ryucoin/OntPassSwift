@@ -17,13 +17,29 @@ class LandingViewController: UIViewController {
 
     @IBOutlet weak var signInButton: UIButton!
     
+    @IBOutlet weak var logoTopConstraint: NSLayoutConstraint! {
+        didSet {
+            logoTopConstraint.constant = screenHeight * 0.05
+        }
+    }
+    @IBOutlet weak var logoBottomConstraint: NSLayoutConstraint! {
+        didSet {
+            logoBottomConstraint.constant = screenHeight * 0.03
+        }
+    }
+    @IBOutlet weak var signInBottomConstraint: NSLayoutConstraint! {
+        didSet {
+            signInBottomConstraint.constant = screenHeight * 0.03
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let attrs1 = [NSAttributedString.Key.font: UIFont(name: lightFont, size: 58),
                       NSAttributedString.Key.foregroundColor: UIColor.white]
         
-        let attrs2 = [NSAttributedString.Key.font: UIFont(name: boldFont, size: 58),
+        let attrs2 = [NSAttributedString.Key.font: UIFont(name: regularFont, size: 58),
                       NSAttributedString.Key.foregroundColor: UIColor.white]
         
         let string1 = "ONT"

@@ -13,6 +13,8 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    
+    let ontController: OntController = OntController.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
