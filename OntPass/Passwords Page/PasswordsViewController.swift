@@ -71,8 +71,14 @@ class PasswordsViewController: UIViewController, UITableViewDataSource, UITableV
                         return
                     }
                     DispatchQueue.main.async(execute: { () -> Void in
-                        let image = UIImage(data: data!)
-                        passwordCell.imageIcon.image = image
+                        if let image = UIImage(data: data!) {
+                            passwordCell.imageIcon.image = image
+                            passwordCell.imageIcon.makeCircular()
+                        } else {
+                            passwordCell.imageIcon.image = UIImage(named: "placeholder")
+                            passwordCell.imageIcon.makeCircular()
+                        }
+                        
                     })
                     
                 }).resume()
