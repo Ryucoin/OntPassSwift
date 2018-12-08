@@ -139,7 +139,8 @@ class PasswordDetailsViewController: UIViewController, UIViewControllerTransitio
         }
     }
     @objc func editPassword() {
-        print("editPassword")
+        let vc = EditViewController()
+        self.present(vc, animated: true, completion: nil)
     }
     @objc func showPassword() {
 
