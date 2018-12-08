@@ -23,6 +23,8 @@ class EnterPrivateKeyViewController: UIViewController, UITextFieldDelegate {
     
     private var loginButton: UIButton!
     
+    let ontController: OntController = OntController.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -92,7 +94,7 @@ class EnterPrivateKeyViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func loginTapped() {
-        let success = true
+        let success = ontController.walletLogin(for: textField.text!)
         if success {
             performSegue(withIdentifier: "logged in", sender: self)
             

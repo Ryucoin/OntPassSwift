@@ -155,7 +155,19 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
     
     func found(code: String) {
-        print(code)
+        let sucess = ontController.walletLogin(for: code)
+        if sucess {
+            performSegue(withIdentifier: "scan success", sender: self)
+        } else {
+            let alert = UIAlertController(title: "Private Key Incorrect",
+                                          message:
+                "We could not log you in with your private key. Please check your QR code and try again.",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in
+                self.viewDidLoad()
+            }))
+            present(alert, animated: true)
+        }
         
     }
     

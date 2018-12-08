@@ -317,6 +317,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5sG-gz-EEt"/>
                     </view>
+                    <connections>
+                        <segue destination="CRe-7c-s7a" kind="show" identifier="scan success" id="zYr-3r-fYc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMm-7A-xkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -603,4 +606,7 @@
         <image name="homeIconFilled" width="30" height="30"/>
         <image name="qrIcon" width="170" height="170"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zYr-3r-fYc"/>
+    </inferredMetricsTieBreakers>
 </document>
