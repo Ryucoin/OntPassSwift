@@ -78,8 +78,17 @@ class SettingsTableViewController: UITableViewController {
         cell.backgroundColor = .clear
         cell.textLabel?.font = UIFont(name: boldFont, size: 17)
         
+        cell.selectionStyle = .none
+        
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 && indexPath.row == 1 {
+            guard let url = URL(string: "http://ont.io") else { return }
+            UIApplication.shared.open(url)
+        }
     }
  
 
