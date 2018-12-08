@@ -22,6 +22,64 @@ class OntController: NSObject {
         return false
     }
     
+    func updatePassword(passDict:[String:String], completion: @escaping (_ result:Bool) -> ()){
+        do {
+            let data = try JSONSerialization.data(withJSONObject: passDict, options: [])
+            let string = String(data: data, encoding: .utf8)
+            let encrypted = encryptString(string: string!, wallet: "")
+            updateData(string: encrypted, completion: completion)
+        } catch let parseError as NSError {
+            print("JSON Error \(parseError.localizedDescription)")
+            completion(false)
+        }
+    }
+    
+    func getPasswords(completion: @escaping (_ result:[String:String]) -> ()) {
+        // RPC call to get data
+        let returnString = ""
+        let decrypted = decryptString(string: returnString, wallet: "")
+        stringToJSON(string: decrypted, completion: completion)
+    }
+    
+    func encryptString(string: String, wallet: String) -> String {
+        if string == "" {
+            return string
+        }
+        
+        // Encrypt
+        
+        return String()
+    }
+    
+    func decryptString(string: String, wallet: String) -> String {
+        if string == "" {
+            return string
+        }
+        
+        // Decrypt
+        
+        return String()
+    }
+    
+    func stringToJSON(string:String, completion: @escaping (_ result:[String:String]) -> ()) {
+        if string == "" {
+            completion([:])
+            return
+        }
+        let data = string.data(using: .utf8)
+        do {
+            if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: String] {
+                completion(json)
+            }
+        } catch let parseError as NSError {
+            print("JSON Error \(parseError.localizedDescription)")
+            completion([:])
+        }
+    }
+    
+    func updateData(string:String, completion: @escaping (_ result:Bool) -> ()){
+        // RPC call to update
+    }
     
     func storeWIF(wif: String) -> Bool {
         let data = wif.data(using: String.Encoding.utf8)!
