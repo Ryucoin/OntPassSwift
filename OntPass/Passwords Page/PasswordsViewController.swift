@@ -19,15 +19,11 @@ class PasswordsViewController: UIViewController, UITableViewDataSource, UITableV
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    struct Password {
-        var username: String?
-        var password: String?
-        var url: String?
-    }
-    
     var passwords = [Password(username: "rosskrasner", password: "pass123", url: "https://google.com"), Password(username: "krasner.ross@gmail.com", password: "pfa23ss!123", url: "https://facebook.com")]
     
     var filteredPasswords = [Password]()
+    
+    private var passForSegue: Password?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +80,13 @@ class PasswordsViewController: UIViewController, UITableViewDataSource, UITableV
         
         let vc = PasswordDetailsViewController()
         vc.modalPresentationStyle = .custom
+        if isFiltering() {
+            passwordForDetail = filteredPasswords[indexPath.row]
+        } else {
+            passwordForDetail = passwords[indexPath.row]
+        }
+        
+        
         present(vc, animated: true, completion: nil)
         
     }
@@ -144,6 +147,7 @@ class PasswordsViewController: UIViewController, UITableViewDataSource, UITableV
     {
         return 89
     }
+    
     
 
 

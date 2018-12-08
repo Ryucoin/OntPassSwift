@@ -61,7 +61,6 @@ class PasswordDetailsViewController: UIViewController, UIViewControllerTransitio
         for menutItem in 0..<6 {
             
             let button = UIButton(frame: CGRect(x: 0, y: menutItem * 50, width: Int(screenWidth), height: 50))
-            button.backgroundColor = UIColor.blue.withAlphaComponent(0.3)
             switch menutItem {
             case 0:
                 button.addTarget(self, action: #selector(goToWebsiteSelected), for: UIControl.Event.touchUpInside)
@@ -93,16 +92,60 @@ class PasswordDetailsViewController: UIViewController, UIViewControllerTransitio
         print("goToWebsiteSelected")
     }
     @objc func copyUsername() {
-        print("copyUsername")
+        if let username = passwordForDetail?.username {
+            UIPasteboard.general.string = username
+        }
     }
     @objc func copyPassword() {
-        print("copyPassword")
+        if let password = passwordForDetail?.password {
+            UIPasteboard.general.string = password
+        }
     }
     @objc func editPassword() {
         print("editPassword")
     }
     @objc func showPassword() {
-        print("showPassword")
+
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Your Password is:", message: "", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.isEnabled = false
+            textField.textAlignment = .center
+            textField.font = UIFont(name: boldFont, size: 20)
+            
+            let redFont = [NSAttributedString.Key.foregroundColor: UIColor.red]
+            
+            let passwordString = passwordForDetail?.password
+            
+            let myAttributedString = NSMutableAttributedString()
+            if let unicodePass = passwordString?.unicodeScalars {
+                for letter in unicodePass {
+                    let myLetter : NSAttributedString
+                    if CharacterSet.decimalDigits.contains(letter) {
+                        myLetter = NSAttributedString(string: "\(letter)", attributes: redFont)
+                    } else {
+                        myLetter = NSAttributedString(string: "\(letter)")
+                    }
+                    myAttributedString.append(myLetter)
+                }
+                
+                textField.attributedText = myAttributedString
+            }
+        }
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            textField?.isEnabled = false
+            textField?.text = passwordForDetail?.password
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+        
+        
     }
     @objc func deletePassword() {
         print("deletePassword")

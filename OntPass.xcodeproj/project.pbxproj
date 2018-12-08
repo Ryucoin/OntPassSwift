@@ -26,6 +26,7 @@
 		4AD9D1D521BB89A800BBEC8E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1D421BB89A800BBEC8E /* SettingsTableViewController.swift */; };
 		4AD9D1D721BB8FD500BBEC8E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1D621BB8FD500BBEC8E /* TabBarViewController.swift */; };
 		4AD9D1D921BB97F700BBEC8E /* PasswordDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1D821BB97F700BBEC8E /* PasswordDetailsViewController.swift */; };
+		4AD9D1DB21BB9EE000BBEC8E /* PasswordObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1DA21BB9EE000BBEC8E /* PasswordObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		4AD9D1D421BB89A800BBEC8E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		4AD9D1D621BB8FD500BBEC8E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4AD9D1D821BB97F700BBEC8E /* PasswordDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailsViewController.swift; sourceTree = "<group>"; };
+		4AD9D1DA21BB9EE000BBEC8E /* PasswordObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				4AD9D1CF21BB7E9200BBEC8E /* PasswordsViewController.swift */,
 				4AD9D1D121BB7ED200BBEC8E /* PasswordTableViewCell.swift */,
 				4AD9D1D821BB97F700BBEC8E /* PasswordDetailsViewController.swift */,
+				4AD9D1DA21BB9EE000BBEC8E /* PasswordObject.swift */,
 			);
 			path = "Passwords Page";
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				4AD9D1CD21BB778D00BBEC8E /* TriangleView.swift in Sources */,
 				4AD9D1D021BB7E9200BBEC8E /* PasswordsViewController.swift in Sources */,
 				4A3AEFC521BB7176006AD11F /* ScanQRViewController.swift in Sources */,
+				4AD9D1DB21BB9EE000BBEC8E /* PasswordObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
