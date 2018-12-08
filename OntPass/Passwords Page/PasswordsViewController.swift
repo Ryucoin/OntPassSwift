@@ -46,6 +46,7 @@ class PasswordsViewController: UIViewController, UITableViewDataSource, UITableV
         tabBarController?.navigationController?.navigationItem.hidesBackButton = true
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: navigationTitleFont]
         self.navigationItem.title = "Passwords"
+        
     }
     
     func searchBarIsEmpty() -> Bool {
@@ -95,15 +96,14 @@ class PasswordsViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "passwordCell", for: indexPath)
         if let passwordCell = cell as? PasswordTableViewCell {
             
+            passwordCell.selectionStyle = .none
+            
             passwordCell.websiteURL.font = UIFont(name: regularFont, size: 17)
             passwordCell.websiteURL.textColor = .white
             
             
             passwordCell.usernameLabel.font = UIFont(name: regularFont, size: 17)
             passwordCell.usernameLabel.textColor = hexStringToUIColor(hex: "B1BAC4")
-            
-            
-            
             
             var link = ""
             

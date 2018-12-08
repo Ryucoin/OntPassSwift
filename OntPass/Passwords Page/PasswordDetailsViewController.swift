@@ -17,7 +17,7 @@ class PasswordDetailsViewController: UIViewController, UIViewControllerTransitio
     }()
     
     let menuView = UIView()
-    let menuHeight: CGFloat = 50 * 6
+    let menuHeight: CGFloat = 50 * 7
     var isPresenting = false
     
     init() {
@@ -55,12 +55,47 @@ class PasswordDetailsViewController: UIViewController, UIViewControllerTransitio
     
     func layoutMenuButtons() {
         let titleView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 50))
-        titleView.backgroundColor = UIColor.yellow.withAlphaComponent(0.3)
         menuView.addSubview(titleView)
+        
+        let sitLabel = UILabel(frame: CGRect(x: 60, y: 2, width: screenWidth - 50, height: 50))
+        sitLabel.font = UIFont(name: regularFont, size: 17)
+        
+        if let siteName = passwordForDetail?.url {
+            sitLabel.text = siteName
+        }
+        titleView.addSubview(sitLabel)
+        
+        let icon = UIImageView(frame: CGRect(x: 15, y: 10, width: 30, height: 30))
+        icon.contentMode = .scaleAspectFit
+        
+        if let link = passwordForDetail?.url {
+            var imgLink = link
+            imgLink.append("/apple-touch-icon.png")
+            
+            URLSession.shared.dataTask(with: NSURL(string: imgLink)! as URL, completionHandler: { (data, response, error) -> Void in
+                
+                if error != nil {
+                    print(error ?? "error")
+                    return
+                }
+                DispatchQueue.main.async(execute: { () -> Void in
+                    if let image = UIImage(data: data!) {
+                        icon.image = image
+                        icon.makeCircular()
+                    } else {
+                        icon.image = UIImage(named: "placeholder")
+                        icon.makeCircular()
+                    }
+                    
+                })
+                
+            }).resume()
+            titleView.addSubview(icon)
+        }
         
         for menutItem in 0..<6 {
             
-            let button = UIButton(frame: CGRect(x: 0, y: menutItem * 50, width: Int(screenWidth), height: 50))
+            let button = UIButton(frame: CGRect(x: 0, y: 50 + menutItem * 50, width: Int(screenWidth), height: 50))
             switch menutItem {
             case 0:
                 button.addTarget(self, action: #selector(goToWebsiteSelected), for: UIControl.Event.touchUpInside)
@@ -89,7 +124,9 @@ class PasswordDetailsViewController: UIViewController, UIViewControllerTransitio
     }
     
     @objc func goToWebsiteSelected() {
-        print("goToWebsiteSelected")
+        let link = passwordForDetail?.url
+        guard let url = URL(string: link ?? "") else { return }
+        UIApplication.shared.open(url)
     }
     @objc func copyUsername() {
         if let username = passwordForDetail?.username {
