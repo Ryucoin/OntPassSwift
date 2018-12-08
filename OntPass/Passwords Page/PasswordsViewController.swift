@@ -28,6 +28,17 @@ class PasswordsViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordsTable.backgroundColor = .black
+        passwordsTable.tableFooterView = UIView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.hidesBackButton = true
+        self.navigationItem.hidesBackButton = true
+        navigationItem.hidesBackButton = true
+        tabBarController?.navigationController?.navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: navigationTitleFont]
+        self.navigationItem.title = "Passwords"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

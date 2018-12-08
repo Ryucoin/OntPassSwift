@@ -23,6 +23,8 @@
 		4AD9D1CD21BB778D00BBEC8E /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1CC21BB778D00BBEC8E /* TriangleView.swift */; };
 		4AD9D1D021BB7E9200BBEC8E /* PasswordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1CF21BB7E9200BBEC8E /* PasswordsViewController.swift */; };
 		4AD9D1D221BB7ED200BBEC8E /* PasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1D121BB7ED200BBEC8E /* PasswordTableViewCell.swift */; };
+		4AD9D1D521BB89A800BBEC8E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1D421BB89A800BBEC8E /* SettingsTableViewController.swift */; };
+		4AD9D1D721BB8FD500BBEC8E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1D621BB8FD500BBEC8E /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		4AD9D1CC21BB778D00BBEC8E /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		4AD9D1CF21BB7E9200BBEC8E /* PasswordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsViewController.swift; sourceTree = "<group>"; };
 		4AD9D1D121BB7ED200BBEC8E /* PasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTableViewCell.swift; sourceTree = "<group>"; };
+		4AD9D1D421BB89A800BBEC8E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		4AD9D1D621BB8FD500BBEC8E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		4A3AEFA121BB5CB8006AD11F /* OntPass */ = {
 			isa = PBXGroup;
 			children = (
+				4AD9D1D321BB899500BBEC8E /* Settings Tab */,
 				4A3AEFB721BB6240006AD11F /* Fonts */,
 				4A3AEFC321BB715E006AD11F /* Scan QR Code */,
 				4AD9D1CE21BB7E7D00BBEC8E /* Passwords Page */,
@@ -84,6 +89,7 @@
 				4A3AEFA221BB5CB8006AD11F /* AppDelegate.swift */,
 				4A3AEFBE21BB636B006AD11F /* Constants.swift */,
 				4A3AEFA621BB5CB8006AD11F /* Main.storyboard */,
+				4AD9D1D621BB8FD500BBEC8E /* TabBarViewController.swift */,
 				4AD9D1CC21BB778D00BBEC8E /* TriangleView.swift */,
 				4A3AEFA921BB5CB9006AD11F /* Assets.xcassets */,
 				4A3AEFAB21BB5CB9006AD11F /* LaunchScreen.storyboard */,
@@ -135,6 +141,14 @@
 				4AD9D1D121BB7ED200BBEC8E /* PasswordTableViewCell.swift */,
 			);
 			path = "Passwords Page";
+			sourceTree = "<group>";
+		};
+		4AD9D1D321BB899500BBEC8E /* Settings Tab */ = {
+			isa = PBXGroup;
+			children = (
+				4AD9D1D421BB89A800BBEC8E /* SettingsTableViewController.swift */,
+			);
+			path = "Settings Tab";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +228,8 @@
 				4AD9D1D221BB7ED200BBEC8E /* PasswordTableViewCell.swift in Sources */,
 				4A3AEFC221BB6642006AD11F /* SignInViewController.swift in Sources */,
 				4AD9D1C921BB746B00BBEC8E /* OntController.swift in Sources */,
+				4AD9D1D521BB89A800BBEC8E /* SettingsTableViewController.swift in Sources */,
+				4AD9D1D721BB8FD500BBEC8E /* TabBarViewController.swift in Sources */,
 				4A3AEFB621BB5D5E006AD11F /* LandingViewController.swift in Sources */,
 				4A3AEFA321BB5CB8006AD11F /* AppDelegate.swift in Sources */,
 				4AD9D1CB21BB765300BBEC8E /* EnterPrivateKeyViewController.swift in Sources */,

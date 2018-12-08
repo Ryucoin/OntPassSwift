@@ -19,6 +19,8 @@ let errorRedColor = hexStringToUIColor(hex: "FE3824")
 
 let ontColor = hexStringToUIColor(hex: "2fa1bc")
 
+let navigationTitleFont = UIFont(name: regularFont, size: 17)!
+
 let screenWidth = UIScreen.main.bounds.width < UIScreen.main.bounds.height ?
     UIScreen.main.bounds.width : UIScreen.main.bounds.height
 let screenHeight = UIScreen.main.bounds.width < UIScreen.main.bounds.height ?
