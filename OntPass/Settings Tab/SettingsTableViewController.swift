@@ -90,6 +90,20 @@ class SettingsTableViewController: UITableViewController {
         } else if indexPath.section == 0 && indexPath.row == 1 {
             guard let url = URL(string: "http://ont.io") else { return }
             UIApplication.shared.open(url)
+        } else if indexPath.section == 1 {
+            print("logout")
+            let alert = UIAlertController(title: "Are you sure you would like to log out?", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                 self.tabBarController?.navigationController?.popToRootViewController(animated: true)
+                
+                }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+                
+                
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
+
         }
     }
  
