@@ -226,7 +226,10 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     @objc func saveTapped() {
         let alert = UIAlertController(title: "Are you sure you want to edit this entry?", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes, Save Entry", style: .default, handler: { action in
-            print("Yes Edit Entry")
+            print("Yes Edit Entry)")
+            print("Username: \(self.usernameTextView.text)")
+            print("URL: \(self.urlTextView.text)")
+            print("Password: \(self.passwordTextView.text)")
             self.dismiss(animated: true, completion: nil)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
@@ -247,8 +250,6 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
-        
-        let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
         
         saveButton.backgroundColor = ontColor
         saveButton.isEnabled = true
